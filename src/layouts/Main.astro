@@ -7,8 +7,8 @@ interface Props {
 }
 
 const { title, description = SITE.description } = Astro.props;
-const pageTitle = title ? `${title} | ${SITE.labName}` : `${SITE.labName} - ${SITE.university}`;
-
+const pageTitle = title ? `${title} | ${SITE.theme}` : `${SITE.theme} }`;
+console.log('Page Title:', pageTitle);
 const currentPath = Astro.url.pathname.replace(/^\/|\/$/g, '');
 const ogSlug = currentPath === '' ? 'index' : currentPath;
 // Check if the current path is one of our supported OG pages (index, research, team, publications, news, join).
@@ -20,7 +20,6 @@ const ogImage = new URL(`/og/${finalOgSlug}.png`, Astro.url);
 import "../styles/global.css";
 ---
 
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -28,7 +27,7 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 
 		    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -55,7 +54,7 @@ import "../styles/global.css";
           "jobTitle": "Principal Investigator",
           "worksFor": {
             "@type": "Organization",
-            "name": SITE.labName,
+            "name": SITE.theme,
             "url": SITE.website
           },
           "description": SITE.description
