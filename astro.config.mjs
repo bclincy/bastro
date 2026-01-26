@@ -5,9 +5,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 import node from '@astrojs/node';
 
+import icon from 'astro-icon';
+
 // https://astro.build/config
 export default defineConfig({
-    integrations: [],
+    integrations: [icon()],
     adapter: node({
         mode: 'standalone',
     }),

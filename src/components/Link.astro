@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon/components";
+
+
+interface Props {
+  text: string;
+  title?: string;
+  href?: string;
+  alt?: string;
+  style: 'primary' | 'secondary';
+  icon?: { 
+        name: string; 
+        size?: number; 
+        color?: string;
+        height: number;
+        width: number;
+        side: 'left' | 'right';
+        className?: string;
+    };
+    isFilled?: boolean;
+    borderVisible?: boolean;
+    classes?: string;
+    
+}
+
+const {
+    text,
+    title,
+    href = '#',
+    alt = '',
+    style = 'primary',
+    icon = null,
+    isFilled = true,
+    borderVisible = false,
+    classes = '', 
+    ...rest
+} = Astro.props as Props
+---
+
+<!-- <a href{href} title={title} class={`link link-${style} ${isFilled ? 'filled' : 'outlined'} ${borderVisible ? 'border-visible' : ''} ${classes}`} {...rest}> -->
+    <a href={href}
+        title={title}
+        class:list= {[[
+            "link",
+            classes,
+            style,
+            isFilled ? "filled" : "outlined",
+            borderVisible ? "border-visible" : "",
+        ]]}
+        {...rest}
+        >
+    <!-- icon -->
+    {
+    icon && icon.side === 'left' && (
+        <Icon name={icon?.name} height={icon?.height || 24} width={icon?.width || 24} size={icon?.size || 16} color={icon?.color || 'currentColor'} class={`icon icon-left ${icon?.className || ''}`} style={`margin-right: 0.5em;`} />
+        )
+    }
+    <span class="link-text">{text}</span>
+        {
+    icon && icon.side === 'right' && (
+        <Icon name={icon?.name} height={icon?.height || 24} width={icon?.width || 24} size={icon?.size || 16} color={icon?.color || 'currentColor'} class={`icon icon-left ${icon?.className || ''}`} style={`margin-right: 0.5em;`} />
+        )
+    }
+</a>

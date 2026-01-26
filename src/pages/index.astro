@@ -2,6 +2,8 @@
 import VideoCards from '../components/VideoCards.astro';
 import Welcome from '../components/Welcome.astro';
 import Main from '../layouts/Main.astro';
+import Header from '../layouts/header.astro';
+import Footer from '../layouts/Footer.astro';
 
 const title = 'Brian Clincy';
 
@@ -10,9 +12,15 @@ const title = 'Brian Clincy';
 ---
 
 <Main title={title}>
+	<Header>
+		hello world
+	</Header>
   <Welcome />
   <VideoCards server:defer>
 	<h1 class="font-large">Help me</h1>
 	<p>Loading video cards...</p>
 	</VideoCards>
+	<Footer>
+		<p>&copy; {new Date().getFullYear()} BrianClincy.com  All rights reserved.</p>
+	</Footer>
 </main>

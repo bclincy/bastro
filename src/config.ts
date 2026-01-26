@@ -15,7 +15,7 @@ export const SITE = {
 
     // Hero Section (Home Page) - Main content does not need to be translated for 8 languages by default
     hero: {
-        title: 'Advancing Computer Vision & Deep Learning Research.',
+        title: 'Advancing Computer Vision & Deep Learning Technologist.',
         subtitle: 'We are the Scholar-Lite Lab.',
         action: 'View Publications', // Optional call to action text
         image: heroImage, // Hero image path
@@ -24,19 +24,19 @@ export const SITE = {
     // Navigation
     nav: [
         { text: 'Home', link: '/', key: 'home' },
-        { text: 'Research', link: '/research', key: 'research' },
-        { text: 'Achievements', link: '/achievements', key: 'achievements' },
+        { text: 'Technologist', link: '/technologist', key: 'technologist' },
+        { text: 'Activist', link: '/activist', key: 'activist' },
+        { text: 'Projects', link: '/projects', key: 'projects' },
+        { text: 'Connect', link: '/join', key: 'join' },
         { text: 'Team', link: '/team', key: 'team' },
-        { text: 'Activities', link: '/activities', key: 'activities' },
-        { text: 'Join Us', link: '/join', key: 'join' },
         { text: 'Search', link: '/search', key: 'search' },
     ],
     footerNav: [
         { text: 'Home', link: '/', key: 'home' },
-        { text: 'Research', link: '/research', key: 'research' },
-        { text: 'Achievements', link: '/achievements', key: 'achievements' },
+        { text: 'Technologist', link: '/technologist', key: 'technologist' },
+        { text: 'Activist', link: '/activist', key: 'activist' },
+        { text: 'projects', link: '/projects', key: 'projects' },
         { text: 'Team', link: '/team', key: 'team' },
-        { text: 'Activities', link: '/activities', key: 'activities' },
         { text: 'Join Us', link: '/join', key: 'join' },
     ],
 

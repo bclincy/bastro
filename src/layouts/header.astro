@@ -1,0 +1,20 @@
+---
+import { SITE } from '../config';
+import { Icon } from "astro-icon/components";
+
+const { nav } = SITE;
+---
+
+<nav>  
+    <div class="navbar">
+        <Icon name="bcnobg" width="60" height="60"/>
+        <ul>
+            { 
+                nav.map((item) => (
+                    <li><a href={item.link} title="{item.key}">{item.text}</a></li>
+                ))
+            }
+
+        </ul>
+    </div> 
+</nav>
