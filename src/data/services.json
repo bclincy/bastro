@@ -1,0 +1,40 @@
+{
+    "services": [
+        {
+            "id": "svc-advertising",
+            "slug": "advertising",
+            "title": "Advertising",
+            "description": "Promote your brand through the personal network and get in front of multiple markets with thousands of eyes over time. We offer multiple advertising opportunities including Reunion T-shirts, event sponsorships, vendor tables, digital promotions, and branded partnership deals. This network is built to provide long-term visibility and community-focused impressions tied to alumni events and merchandise.",
+            "date": "2026-02-18",
+            "updated": "2026-02-18",
+            "active": true
+        },
+        {
+            "id": "svc-business-listing",
+            "slug": "business-listing",
+            "title": "Business Listing",
+            "description": "Own a business? Get listed in the Muskegon Alumni Association business directory so alumni and supporters can find and support you. Listings include optional badges such as Alumni-Owned, Black-Owned, Veteran-Owned, Nonprofit, Featured Partner, and Event Vendor. This service helps increase visibility, credibility, and referrals within the alumni network.",
+            "date": "2026-02-18",
+            "updated": "2026-02-18",
+            "active": true
+        },
+        {
+            "id": "svc-membership-benefits",
+            "slug": "membership-benefits",
+            "title": "Membership Benefits",
+            "description": "Membership provides exclusive benefits including discount access to alumni events, merchandise, and partner services. Members gain direct connections to the City of Muskegon, Muskegon Public Schools resources, and community initiatives. Benefits also include access to an alumni event calendar, priority invites, networking opportunities, and tools to build meaningful personal and professional connections across the Muskegon alumni community.",
+            "date": "2026-02-18",
+            "updated": "2026-02-18",
+            "active": true
+        },
+        {
+            "id": "svc-reunion-platform",
+            "slug": "reunion-platform",
+            "title": "Reunion Platform",
+            "description": "Our Reunion Platform makes it easy to plan and manage your class reunion in one place. Features include user and class contact management, sponsor tracking, reusable templates from previous reunions, built-in service agreements with discounted vendor options, check-in and attendance lists, and a centralized admin dashboard. This platform streamlines planning, communication, and execution so alumni leaders can focus on bringing classmates together.",
+            "date": "2026-02-18",
+            "updated": "2026-02-18",
+            "active": true
+        }
+    ]
+}
