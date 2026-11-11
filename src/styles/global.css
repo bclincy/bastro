@@ -1,7 +1,75 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html, body {
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --text: #1f2937;
+  --background: #ffffff;
+  --primary: #101820;
+  --secondary: #1e293b;
+  --accent: #f59e0b;
+  --muted: #9ca3af;
+  --border: #fa8334;
+  --color-orange-light: #ffac70;
+  --color-brand-orange: #fa8334;
+  --color-slate-black: #101820;
+  --color-slate-surface: #1e293b;
+  --color-grey: #64748b;
+  --fluid-vmin: 500px;
+  --fluid-vmax: 1000px;
+
+  --fluid: progress(100vmin, var(--fluid-vmin), var(--fluid-vmax));
+
+  --base: calc(1rem +var(--fluid) * 0.125rem);
+  --type-scale: calc(1.2 + var(--fluid) * 0.0214);
+  /* 1.2 -> 1.414 */
+
+  --fs-1: var(--base);
+  --fs-2: calc(var(--fs-1) * pow(var(--type-scale), 1));
+  --fs-3: calc(var(--fs-1) * pow(var(--type-scale), 2));
+  --fs-4: calc(var(--fs-1) * pow(var(--type-scale), 3));
+  --fs-5: calc(var(--fs-1) * pow(var(--type-scale), 4));
+
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
   height: 100%;
+  background-color: var(--color-slate-surface);
+
+}
+
+theme-icon {
+  width: 24px;
+  height: 24px;
+  color: #1e293b;
+}
+
+:global(.dark) {
+  --text: #ffffff;
+  --background: #1e293b;
+  --primary: #ffffff;
+  --secondary: #1f2937;
+  --accent: #f59e0b;
+  --muted: #9ca3af;
+  --border: #fa8334;
+  --color-orange-light: #ffac70;
+  --color-brand-orange: #fa8334;
+  --color-slate-black: #ffffff;
+  --color-slate-surface: #1e293b;
+  --color-grey: #64748b;
+
+}
+
+/* Automatically switches color when the .dark class is active on the html element */
+:global(.dark) .theme-icon {
+  color: #ffffff;
 }

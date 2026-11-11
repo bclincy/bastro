@@ -1,0 +1,19 @@
+---
+import { SITE } from '../config';
+import { Icon } from "astro-icon/components";
+
+const { nav } = SITE;
+const { active } = Astro.props;
+---
+
+<nav class="nav">
+  <ul>
+    {nav.map((item) => (
+      <li class={item.active === active ? 'active' : ''}>
+        <a href={item.link}>
+          <span>{item.text}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav> 

@@ -2,6 +2,11 @@
 
 ---
 
-<footer>
-  <p>&copy; {new Date().getFullYear()} Brian Clincy. All rights reserved.</p>
+<footer class="footer ">
+  
+  <p>&copy; <span id="cpDate">{new Date().getFullYear()}</span> BrianClincy.com All rights reserved.</p>
 </footer>
+<script>
+  const cpDate = document.getElementById("cpDate");
+  if (cpDate) cpDate.textContent = new Date().getFullYear().toString();
+</script>
